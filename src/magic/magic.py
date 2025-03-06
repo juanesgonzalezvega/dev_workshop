@@ -48,6 +48,15 @@ class Magic:
         Returns:
             bool: True si n es primo, False en caso contrario
         """
+        EsPrimo = True
+        if n < 2:
+            EsPrimo = False
+        else:
+            for i in range(2, n):
+                if n % i == 0:
+                    EsPrimo = False
+                    break  
+        return
         pass
     
     def generar_primos(self, n):

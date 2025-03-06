@@ -198,4 +198,7 @@ class Data:
         Returns:
             list: Matriz transpuesta
         """
+        if not matriz or not matriz[0]:
+            return []
+        return [[matriz[j][i] for j in range(len(matriz))] for i in range(len(matriz[0]))]
         pass

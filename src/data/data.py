@@ -33,7 +33,7 @@ class Data:
             int: Índice del elemento o -1 si no se encuentra
         """
         for i in range(len(lista)):
-            if lista[i]==elemento:
+            if lista[i] == elemento:
                 return i
         return -1
         pass
@@ -93,6 +93,10 @@ class Data:
         Returns:
             list: Lista rotada
         """
+        if not lista:
+            return lista
+        k = k% len(lista)
+        return lista[-k:]+lista[:-k]
         pass
     
     def encuentra_numero_faltante(self, lista):

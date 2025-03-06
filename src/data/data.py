@@ -67,6 +67,19 @@ class Data:
         Returns:
             list: Lista combinada y ordenada
         """
+        i = 0
+        j = 0
+        Resultado = []
+        while i<len(lista1)and j <len(lista2):
+            if lista1[i]<lista2[j]:
+                Resultado.append(lista1[i])
+                i +=1
+            else:
+                Resultado.append(lista2[j])
+                j+=1
+        Resultado.extend(lista1[i:])
+        Resultado.extend(lista2[j:])
+        return Resultado
         pass
     
     def rotar_lista(self, lista, k):

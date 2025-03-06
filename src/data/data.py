@@ -109,6 +109,10 @@ class Data:
         Returns:
             int: El número que falta en la secuencia
         """
+        v = len(lista)+1
+        sum = v*(v+1)//2
+        SumaActual = sum(lista)
+        return sum - SumaActual
         pass
     
     def es_subconjunto(self, conjunto1, conjunto2):
